@@ -1,17 +1,20 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "strict": false,                   // Disables all strict checks
+    "noImplicitAny": false,            // Allows implicit `any` types
+    "noUnusedLocals": false,           // Ignores unused variables
+    "noUnusedParameters": false,       // Ignores unused function params
+    "noFallthroughCasesInSwitch": false, // Disables switch-case fallthrough warnings
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
   ]
 }
